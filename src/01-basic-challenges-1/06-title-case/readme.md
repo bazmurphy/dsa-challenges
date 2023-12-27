@@ -19,8 +19,8 @@ function titleCase(str: string): string;
 
 ```js
 titleCase("I'm a little tea pot"); // I'm A Little Tea Pot
-titleCase('sHoRt AnD sToUt'); // Short And Stout
-titleCase('HERE IS MY HANDLE HERE IS MY SPOUT'); // Here Is My Handle Here Is My Spout
+titleCase("sHoRt AnD sToUt"); // Short And Stout
+titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"); // Here Is My Handle Here Is My Spout
 ```
 
 ### Constraints
@@ -80,9 +80,9 @@ The second argument is a callback function that returns the uppercase version of
 ### Test Cases
 
 ```js
-test('Converting string to title case', () => {
-  expect(titleCase('hello world')).toBe('Hello World');
-  expect(titleCase('javascript programming')).toBe('Javascript Programming');
-  expect(titleCase('openai chatbot')).toBe('Openai Chatbot');
+test("Converting string to title case", () => {
+  expect(titleCase("hello world")).toBe("Hello World");
+  expect(titleCase("javascript programming")).toBe("Javascript Programming");
+  expect(titleCase("openai chatbot")).toBe("Openai Chatbot");
 });
 ```

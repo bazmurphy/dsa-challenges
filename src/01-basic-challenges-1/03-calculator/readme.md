@@ -47,20 +47,20 @@ function calculator(num1, num2, operator) {
   let result;
 
   switch (operator) {
-    case '+':
+    case "+":
       result = num1 + num2;
       break;
-    case '-':
+    case "-":
       result = num1 - num2;
       break;
-    case '*':
+    case "*":
       result = num1 * num2;
       break;
-    case '/':
+    case "/":
       result = num1 / num2;
       break;
     default:
-      throw new Error('Invalid operator');
+      throw new Error("Invalid operator");
   }
 
   return result;
@@ -84,16 +84,16 @@ function calculator(num1, num2, operator) {
 function calculator(num1, num2, operator) {
   let result;
 
-  if (operator === '+') {
+  if (operator === "+") {
     result = num1 + num2;
-  } else if (operator === '-') {
+  } else if (operator === "-") {
     result = num1 - num2;
-  } else if (operator === '*') {
+  } else if (operator === "*") {
     result = num1 * num2;
-  } else if (operator === '/') {
+  } else if (operator === "/") {
     result = num1 / num2;
   } else {
-    throw new Error('Invalid operator');
+    throw new Error("Invalid operator");
   }
 
   return result;
@@ -111,24 +111,24 @@ function calculator(num1, num2, operator) {
 ### Test Cases
 
 ```js
-test('Performing arithmetic operations using the calculator function', () => {
+test("Performing arithmetic operations using the calculator function", () => {
   // Test case inputs
   const num1 = 5;
   const num2 = 7;
 
   // Addition
-  expect(calculator(num1, num2, '+')).toBe(12);
+  expect(calculator(num1, num2, "+")).toBe(12);
 
   // Subtraction
-  expect(calculator(num1, num2, '-')).toBe(-2);
+  expect(calculator(num1, num2, "-")).toBe(-2);
 
   // Multiplication
-  expect(calculator(num1, num2, '*')).toBe(35);
+  expect(calculator(num1, num2, "*")).toBe(35);
 
   // Division
-  expect(calculator(num1, num2, '/')).toBeCloseTo(0.7143, 4);
+  expect(calculator(num1, num2, "/")).toBeCloseTo(0.7143, 4);
 
   // Invalid operator
-  expect(() => calculator(num1, num2, '^')).toThrow('Invalid operator');
+  expect(() => calculator(num1, num2, "^")).toThrow("Invalid operator");
 });
 ```

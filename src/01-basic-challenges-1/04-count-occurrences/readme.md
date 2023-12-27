@@ -1,6 +1,5 @@
 # Challenge: Count Occurrences
 
-
 ## Instructions
 
 Write a function called `countOccurrences()` that takes in a string and a character and returns the number of occurrences of that character in the string.
@@ -20,8 +19,8 @@ function countOccurrences(str: string, char: string): number;
 ### Examples
 
 ```js
-countOccurrences('hello', 'l'); // 2
-countOccurrences('hello', 'z'); // 0
+countOccurrences("hello", "l"); // 2
+countOccurrences("hello", "z"); // 0
 ```
 
 ### Constraints
@@ -102,9 +101,9 @@ This solution may be prettier, but it actually is not as efficient as the loop. 
 ### Test Cases
 
 ```js
-test('Count Occurrences of a Character', () => {
-  expect(countOccurrences('hello', 'l')).toBe(2);
-  expect(countOccurrences('programming', 'm')).toBe(2);
-  expect(countOccurrences('banana', 'a')).toBe(3);
+test("Count Occurrences of a Character", () => {
+  expect(countOccurrences("hello", "l")).toBe(2);
+  expect(countOccurrences("programming", "m")).toBe(2);
+  expect(countOccurrences("banana", "a")).toBe(3);
 });
 ```

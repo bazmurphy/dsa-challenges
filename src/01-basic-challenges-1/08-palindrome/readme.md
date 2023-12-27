@@ -45,8 +45,8 @@ Using `replace` with a regular expression is the easiest way to solve this chall
 
 ```js
 function isPalindrome(str) {
-  const formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const reversedStr = formattedStr.split('').reverse().join('');
+  const formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reversedStr = formattedStr.split("").reverse().join("");
   return formattedStr === reversedStr;
 }
 ```
@@ -74,7 +74,7 @@ function isPalindrome(str) {
 }
 
 function removeNonAlphanumeric(str) {
-  let formattedStr = '';
+  let formattedStr = "";
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
     if (isAlphaNumeric(char)) {
@@ -93,7 +93,7 @@ function isAlphaNumeric(char) {
 }
 
 function reverseString(str) {
-  let reversed = '';
+  let reversed = "";
   for (let i = str.length - 1; i >= 0; i--) {
     reversed += str[i];
   }
@@ -116,10 +116,10 @@ This solution is a bit tougher.
 ### Test Cases
 
 ```js
-test('Checking for palindrome strings', () => {
-  expect(isPalindrome('racecar')).toBe(true);
-  expect(isPalindrome('Hello')).toBe(false);
-  expect(isPalindrome('A man, a plan, a canal, Panama')).toBe(true);
-  expect(isPalindrome('12321')).toBe(true);
+test("Checking for palindrome strings", () => {
+  expect(isPalindrome("racecar")).toBe(true);
+  expect(isPalindrome("Hello")).toBe(false);
+  expect(isPalindrome("A man, a plan, a canal, Panama")).toBe(true);
+  expect(isPalindrome("12321")).toBe(true);
 });
 ```

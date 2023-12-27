@@ -46,11 +46,11 @@ function fizzBuzz(num) {
 
   for (let i = 1; i <= num; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      arr.push('FizzBuzz');
+      arr.push("FizzBuzz");
     } else if (i % 3 === 0) {
-      arr.push('Fizz');
+      arr.push("Fizz");
     } else if (i % 5 === 0) {
-      arr.push('Buzz');
+      arr.push("Buzz");
     } else {
       arr.push(i);
     }
@@ -75,23 +75,23 @@ function fizzBuzz(num) {
 ### Test Cases
 
 ```js
-test('FizzBuzz Array', () => {
+test("FizzBuzz Array", () => {
   expect(fizzBuzzArray(15)).toEqual([
     1,
     2,
-    'Fizz',
+    "Fizz",
     4,
-    'Buzz',
-    'Fizz',
+    "Buzz",
+    "Fizz",
     7,
     8,
-    'Fizz',
-    'Buzz',
+    "Fizz",
+    "Buzz",
     11,
-    'Fizz',
+    "Fizz",
     13,
     14,
-    'FizzBuzz',
+    "FizzBuzz",
   ]);
 });
 ```

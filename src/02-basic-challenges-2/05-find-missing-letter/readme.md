@@ -18,9 +18,9 @@ function findMissingLetter(arr: string[]): string;
 ### Examples
 
 ```js
-findMissingLetter(['a', 'b', 'c', 'd', 'f']); // => "e"
-findMissingLetter(['O', 'Q', 'R', 'S']); // => "P"
-findMissingLetter(['t', 'u', 'v', 'w', 'x', 'z']); // => "y"
+findMissingLetter(["a", "b", "c", "d", "f"]); // => "e"
+findMissingLetter(["O", "Q", "R", "S"]); // => "P"
+findMissingLetter(["t", "u", "v", "w", "x", "z"]); // => "y"
 ```
 
 ### Constraints
@@ -31,7 +31,7 @@ findMissingLetter(['t', 'u', 'v', 'w', 'x', 'z']); // => "y"
 ### Hints
 
 - You can put the alphabet in a string and use the `indexOf` method to get the index of a letter in the alphabet string.
-- Another approach would be to use the `charCodeAt` method to get the unicode value of a letter. 
+- Another approach would be to use the `charCodeAt` method to get the unicode value of a letter.
 
 ## Solutions
 
@@ -40,7 +40,7 @@ findMissingLetter(['t', 'u', 'v', 'w', 'x', 'z']); // => "y"
 
 ```js
 function findMissingLetter(arr) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const startIndex = alphabet.indexOf(arr[0]);
 
   for (let i = 0; i < arr.length; i++) {
@@ -49,7 +49,7 @@ function findMissingLetter(arr) {
     }
   }
 
-  return '';
+  return "";
 }
 ```
 
@@ -76,7 +76,7 @@ function findMissingLetter(arr) {
     }
     start = current;
   }
-  return '';
+  return "";
 }
 ```
 
@@ -92,10 +92,10 @@ function findMissingLetter(arr) {
 ### Test Cases
 
 ```js
-test('Find Missing Letter', () => {
-  expect(findMissingLetter(['a', 'b', 'c', 'e'])).toBe('d');
-  expect(findMissingLetter(['X', 'Z'])).toBe('Y');
-  expect(findMissingLetter(['m', 'n', 'o', 'q', 'r'])).toBe('p');
-  expect(findMissingLetter(['F', 'G', 'H', 'J'])).toBe('I');
+test("Find Missing Letter", () => {
+  expect(findMissingLetter(["a", "b", "c", "e"])).toBe("d");
+  expect(findMissingLetter(["X", "Z"])).toBe("Y");
+  expect(findMissingLetter(["m", "n", "o", "q", "r"])).toBe("p");
+  expect(findMissingLetter(["F", "G", "H", "J"])).toBe("I");
 });
 ```
