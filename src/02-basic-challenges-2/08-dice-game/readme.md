@@ -31,9 +31,11 @@ function diceGameSimulation(numSimulations: number): Array;
 ```js
 console.log(diceGameSimulation(3));
 /*
-  { dice1: 1, dice2: 5, sum: 6, result: 'roll again' },
-  { dice1: 5, dice2: 6, sum: 11, result: 'win' },
-  { dice1: 1, dice2: 1, sum: 2, result: 'lose' }
+  [
+    { dice1: 1, dice2: 5, sum: 6, result: 'roll again' },
+    { dice1: 5, dice2: 6, sum: 11, result: 'win' },
+    { dice1: 1, dice2: 1, sum: 2, result: 'lose' }
+  ]
 */
 ```
 

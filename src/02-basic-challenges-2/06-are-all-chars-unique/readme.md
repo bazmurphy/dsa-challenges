@@ -64,8 +64,6 @@ function areAllCharactersUnique(str) {
 - Iterate through the string and check if the current character is in the set. If it is, we return `false` because it means we've seen the character before. If it isn't, we add it to the set.
 - If we make it through the entire string without returning `false`, we return `true` because it means we haven't seen any characters more than once.
 
-</details>
-
 <details>
   <summary>Click For Solution 2</summary>
 
@@ -86,6 +84,8 @@ function areAllCharactersUnique(str) {
   return true;
 }
 ```
+
+</details>
 
 ### Explanation
 
