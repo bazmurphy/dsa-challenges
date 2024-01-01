@@ -78,6 +78,8 @@ sumUpTo(4) returns 10
 sumUpTo(5) returns 15
 ```
 
+### Diagram
+
 ```mermaid
 graph TD
   A[START I FINISH] -->|CALL: sumUpTo 5 | B(RETURN: sumUpTo 4)

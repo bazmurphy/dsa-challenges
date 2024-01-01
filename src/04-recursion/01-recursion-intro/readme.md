@@ -63,6 +63,8 @@ In this example, we have a function called `countDown` that takes in a number. W
 
 We are calling the same function with a smaller number each time. This is recursion.
 
+### Diagram
+
 ```mermaid
 graph TD
   A[START I FINISH] -->|CALL: countDown 3 | B(CONSOLE LOG 3, num--, RETURN countDown 2)

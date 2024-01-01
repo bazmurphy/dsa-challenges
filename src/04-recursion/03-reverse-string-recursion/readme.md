@@ -82,13 +82,7 @@ Now, we can start "unwinding" the recursion and concatenating the characters to 
 
 So, the function concatenates the characters in reverse order as it "unwinds" the recursion, effectively reversing the original string.
 
-We could even cut this solution down to a single line:
-
-```js
-// Shorter version
-const reverseString = (str) =>
-  str === "" ? "" : reverseString(str.substr(1)) + str.charAt(0);
-```
+### Diagram
 
 ```mermaid
 graph TD
@@ -104,4 +98,12 @@ graph TD
   D -->|RETURN: llo | C
   C -->|RETURN: olle | B
   B -->|RETURN: olleh | A
+```
+
+We could even cut this solution down to a single line:
+
+```js
+// Shorter version
+const reverseString = (str) =>
+  str === "" ? "" : reverseString(str.substr(1)) + str.charAt(0);
 ```
