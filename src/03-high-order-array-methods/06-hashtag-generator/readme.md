@@ -37,6 +37,23 @@ generateHashtag(""); // false
 - You can use the string method `charAt()` to get the character at a specific index.
 - Use string methods to capitalize the first letter of each word.
 
+### Test Cases
+
+```js
+test("Generating Hashtags", () => {
+  expect(generateHashtag(" Hello there thanks for trying my Kata")).toBe(
+    "#HelloThereThanksForTryingMyKata",
+  );
+  expect(generateHashtag("    Hello     World   ")).toBe("#HelloWorld");
+  expect(generateHashtag("")).toBe(false);
+  expect(
+    generateHashtag(
+      "This is a very very very very very very very very very very very very very very long input that should result in a false hashtag because it exceeds the character limit of 140",
+    ),
+  ).toBe(false);
+});
+```
+
 ## Solutions
 
 <details>

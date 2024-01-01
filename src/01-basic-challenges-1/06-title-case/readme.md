@@ -29,6 +29,16 @@ titleCase("HERE IS MY HANDLE HERE IS MY SPOUT"); // Here Is My Handle Here Is My
 
 ### Hints
 
+### Test Cases
+
+```js
+test("Converting string to title case", () => {
+  expect(titleCase("hello world")).toBe("Hello World");
+  expect(titleCase("javascript programming")).toBe("Javascript Programming");
+  expect(titleCase("openai chatbot")).toBe("Openai Chatbot");
+});
+```
+
 ## Solutions
 
 <details>
@@ -76,13 +86,3 @@ The regex `/\b\w/g` matches the first letter of each word.
 The second argument is a callback function that returns the uppercase version of the matched letter.
 
 </details>
-
-### Test Cases
-
-```js
-test("Converting string to title case", () => {
-  expect(titleCase("hello world")).toBe("Hello World");
-  expect(titleCase("javascript programming")).toBe("Javascript Programming");
-  expect(titleCase("openai chatbot")).toBe("Openai Chatbot");
-});
-```

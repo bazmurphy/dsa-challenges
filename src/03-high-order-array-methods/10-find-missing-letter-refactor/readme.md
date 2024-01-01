@@ -36,6 +36,17 @@ findMissingLetter(["t", "u", "v", "w", "x", "z"]); // => "y"
 - You can use `map` to get an array of the unicode numbers (using charCodeAt) of the letters in the input array and then use `find` to find the missing character code.
 - You can also use `filter` as well as `reduce`
 
+### Test Cases
+
+```js
+test("Find Missing Letter", () => {
+  expect(findMissingLetter(["a", "b", "c", "e"])).toBe("d");
+  expect(findMissingLetter(["X", "Z"])).toBe("Y");
+  expect(findMissingLetter(["m", "n", "o", "q", "r"])).toBe("p");
+  expect(findMissingLetter(["F", "G", "H", "J"])).toBe("I");
+});
+```
+
 ## Solutions
 
 <details>
@@ -127,14 +138,3 @@ function findMissingLetter(arr) {
 - If the `reduce` method returns a falsy value, we return an empty string.
 
 </details>
-
-### Test Cases
-
-```js
-test("Find Missing Letter", () => {
-  expect(findMissingLetter(["a", "b", "c", "e"])).toBe("d");
-  expect(findMissingLetter(["X", "Z"])).toBe("Y");
-  expect(findMissingLetter(["m", "n", "o", "q", "r"])).toBe("p");
-  expect(findMissingLetter(["F", "G", "H", "J"])).toBe("I");
-});
-```

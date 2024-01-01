@@ -29,6 +29,17 @@ validAnagrams("astronomer", "moonstarer"); // true
 - Split the strings into arrays of characters, then reduce each array into an object of character frequencies for the strings
 - Compare the frequencies
 
+### Test Cases
+
+```js
+test("Checking for Valid Anagrams", () => {
+  expect(validAnagrams("listen", "silent")).toBe(true);
+  expect(validAnagrams("hello", "world")).toBe(false);
+  expect(validAnagrams("astronomer", "moonstarer")).toBe(true);
+  expect(validAnagrams("apple", "banana")).toBe(false);
+});
+```
+
 ## Solutions
 
 <details>
@@ -59,14 +70,3 @@ function validAnagrams(str1, str2) {
 - Object.keys will check if every character in `freqCount1` has the same frequency count in `freqCount2`. If all of the frequency counts are equal, `every` will return `true`. If any of the frequency counts are not equal, `every` will return `false` and we will know that the strings are not valid anagrams.
 
 </details>
-
-### Test Cases
-
-```js
-test("Checking for Valid Anagrams", () => {
-  expect(validAnagrams("listen", "silent")).toBe(true);
-  expect(validAnagrams("hello", "world")).toBe(false);
-  expect(validAnagrams("astronomer", "moonstarer")).toBe(true);
-  expect(validAnagrams("apple", "banana")).toBe(false);
-});
-```

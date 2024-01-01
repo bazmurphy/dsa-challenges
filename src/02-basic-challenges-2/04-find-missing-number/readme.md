@@ -35,6 +35,16 @@ findMissingNumber([10, 5, 1, 2, 4, 6, 8, 3, 9]); // 7
 - Subtract the sum of the numbers in the array from the sum of the numbers from 1 to n (inclusive).
 - You could use a for loop or the reduce method to calculate the sum of the numbers in the array. We will be focusing on methods like reduce in the next section, but I will still show you both ways.
 
+### Test Cases
+
+```js
+test("Finding the missing number", () => {
+  expect(findMissingNumber([1, 2, 3, 5])).toBe(4);
+  expect(findMissingNumber([10, 8, 6, 7, 5, 4, 2, 3, 1])).toBe(9);
+  expect(findMissingNumber([1, 3, 4, 5, 6])).toBe(2);
+});
+```
+
 ## Solutions
 
 <details>
@@ -87,13 +97,3 @@ We then return the difference between the expected sum and the actual sum. This 
 Again, you can use a for loop or the reduce method to calculate the sum of the numbers in the array.
 
 </details>
-
-### Test Cases
-
-```js
-test("Finding the missing number", () => {
-  expect(findMissingNumber([1, 2, 3, 5])).toBe(4);
-  expect(findMissingNumber([10, 8, 6, 7, 5, 4, 2, 3, 1])).toBe(9);
-  expect(findMissingNumber([1, 3, 4, 5, 6])).toBe(2);
-});
-```

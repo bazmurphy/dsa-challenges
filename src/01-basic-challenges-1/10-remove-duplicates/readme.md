@@ -31,6 +31,21 @@ removeDuplicates([1, 2, 3, 4, 5, true, 1, 'hello' 2, 3, 'hello', true]); // [1, 
 
 - You can do this with a traditional 'for' loop, but if you are familiar with the `Set` object, you can use that to solve this problem. Maybe try both ways!
 
+### Test Cases
+
+```js
+test("Removing duplicates from an array", () => {
+  expect(removeDuplicates([1, 2, 3, 2, 4, 1, 5])).toEqual([1, 2, 3, 4, 5]);
+  expect(
+    removeDuplicates(["apple", "banana", "orange", "banana", "kiwi"]),
+  ).toEqual(["apple", "banana", "orange", "kiwi"]);
+  expect(removeDuplicates([true, true, false, true, false])).toEqual([
+    true,
+    false,
+  ]);
+});
+```
+
 ## Solutions
 
 <details>
@@ -79,18 +94,3 @@ This solution is extremely simple. We take in an array with duplicates and we cr
 The reason that this works is because a `Set` can only contain unique values. So when we create a `Set` from an array, it will remove all the duplicates automatically.
 
 </details>
-
-### Test Cases
-
-```js
-test("Removing duplicates from an array", () => {
-  expect(removeDuplicates([1, 2, 3, 2, 4, 1, 5])).toEqual([1, 2, 3, 4, 5]);
-  expect(
-    removeDuplicates(["apple", "banana", "orange", "banana", "kiwi"]),
-  ).toEqual(["apple", "banana", "orange", "kiwi"]);
-  expect(removeDuplicates([true, true, false, true, false])).toEqual([
-    true,
-    false,
-  ]);
-});
-```

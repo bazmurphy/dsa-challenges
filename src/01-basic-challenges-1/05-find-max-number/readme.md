@@ -27,6 +27,16 @@ findMaxNumber([1, 2, 3, 4, 5, 10, 9, 8, 7, 6]); // 10
 
 - There is a very easy way to do this using a specific built-in method. I would suggest not doing it that way. Try to solve this problem using a `for` loop.
 
+### Test Cases
+
+```js
+test("Finding the maximum number in an array", () => {
+  expect(findMaxNumber([1, 5, 3, 9, 2])).toBe(9);
+  expect(findMaxNumber([0, -1, -5, 2])).toBe(2);
+  expect(findMaxNumber([10, 10, 10, 10])).toBe(10);
+});
+```
+
 ## Solutions
 
 <details>
@@ -73,13 +83,3 @@ function findMaxNumber(arr) {
 - Return `max` after the loop is finished.
 
 </details>
-
-### Test Cases
-
-```js
-test("Finding the maximum number in an array", () => {
-  expect(findMaxNumber([1, 5, 3, 9, 2])).toBe(9);
-  expect(findMaxNumber([0, -1, -5, 2])).toBe(2);
-  expect(findMaxNumber([10, 10, 10, 10])).toBe(10);
-});
-```

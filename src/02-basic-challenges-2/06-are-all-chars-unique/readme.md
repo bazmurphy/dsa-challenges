@@ -34,6 +34,18 @@ areAllCharactersUnique("a"); // true
 
 - You can use a for loop to iterate through the string and check if the current character is in the set or object.
 
+### Test Cases
+
+```js
+test("Unique Characters in a String", () => {
+  expect(areAllCharactersUnique("abcdefg")).toBe(true);
+  expect(areAllCharactersUnique("abcdefgA")).toBe(true);
+  expect(areAllCharactersUnique("programming")).toBe(false);
+  expect(areAllCharactersUnique("")).toBe(true);
+  expect(areAllCharactersUnique("a")).toBe(true);
+});
+```
+
 ## Solutions
 
 <details>
@@ -96,15 +108,3 @@ Then we iterate through the string and check if the current character is in the 
 If we make it through the entire string without returning `false`, we return `true` because it means we haven't seen any characters more than once.
 
 </details>
-
-### Test Cases
-
-```js
-test("Unique Characters in a String", () => {
-  expect(areAllCharactersUnique("abcdefg")).toBe(true);
-  expect(areAllCharactersUnique("abcdefgA")).toBe(true);
-  expect(areAllCharactersUnique("programming")).toBe(false);
-  expect(areAllCharactersUnique("")).toBe(true);
-  expect(areAllCharactersUnique("a")).toBe(true);
-});
-```

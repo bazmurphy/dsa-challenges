@@ -35,6 +35,31 @@ calculator(10, 5, '/') // 2
 
 - You can use `if` statements or `switch` statements to determine which operator was given.
 
+### Test Cases
+
+```js
+test("Performing arithmetic operations using the calculator function", () => {
+  // Test case inputs
+  const num1 = 5;
+  const num2 = 7;
+
+  // Addition
+  expect(calculator(num1, num2, "+")).toBe(12);
+
+  // Subtraction
+  expect(calculator(num1, num2, "-")).toBe(-2);
+
+  // Multiplication
+  expect(calculator(num1, num2, "*")).toBe(35);
+
+  // Division
+  expect(calculator(num1, num2, "/")).toBeCloseTo(0.7143, 4);
+
+  // Invalid operator
+  expect(() => calculator(num1, num2, "^")).toThrow("Invalid operator");
+});
+```
+
 ## Solutions
 
 <details>
@@ -107,28 +132,3 @@ function calculator(num1, num2, operator) {
 - Use an `if` statement to determine which operator was given. If it was +, -, \* or /, we did the calculation. If the operator is anything else, we throw an error.
 
  </details>
-
-### Test Cases
-
-```js
-test("Performing arithmetic operations using the calculator function", () => {
-  // Test case inputs
-  const num1 = 5;
-  const num2 = 7;
-
-  // Addition
-  expect(calculator(num1, num2, "+")).toBe(12);
-
-  // Subtraction
-  expect(calculator(num1, num2, "-")).toBe(-2);
-
-  // Multiplication
-  expect(calculator(num1, num2, "*")).toBe(35);
-
-  // Division
-  expect(calculator(num1, num2, "/")).toBeCloseTo(0.7143, 4);
-
-  // Invalid operator
-  expect(() => calculator(num1, num2, "^")).toThrow("Invalid operator");
-});
-```

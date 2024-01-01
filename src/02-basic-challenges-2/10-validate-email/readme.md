@@ -26,6 +26,21 @@ validateEmail("john@gmail"); // false
 
 - If you know regular expressions, this is a great place to use them. I am going to give you two solutions. One uses regular expressions and one doesn't.
 
+### Test Cases
+
+```js
+test("Valid Email Addresses", () => {
+  expect(validateEmail("john@example.com")).toBe(true);
+  expect(validateEmail("jane.doe@domain.org")).toBe(true);
+});
+
+test("Invalid Email Addresses", () => {
+  expect(validateEmail("invalid-email")).toBe(false);
+  expect(validateEmail("@domain.com")).toBe(false);
+  expect(validateEmail("user@domain")).toBe(false);
+});
+```
+
 ## Solutions
 
 <details>
@@ -96,18 +111,3 @@ This solution is a bit more complicated, but it doesn't use regular expressions.
 Finally, if none of the conditions are false, we return `true`.
 
 </details>
-
-### Test Cases
-
-```js
-test("Valid Email Addresses", () => {
-  expect(validateEmail("john@example.com")).toBe(true);
-  expect(validateEmail("jane.doe@domain.org")).toBe(true);
-});
-
-test("Invalid Email Addresses", () => {
-  expect(validateEmail("invalid-email")).toBe(false);
-  expect(validateEmail("@domain.com")).toBe(false);
-  expect(validateEmail("user@domain")).toBe(false);
-});
-```

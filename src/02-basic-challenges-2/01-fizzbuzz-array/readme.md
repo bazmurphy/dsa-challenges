@@ -35,6 +35,30 @@ fizzBuzzArray(15); // [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11
 
 - Instead of console logging each number, you will need to push each number into an array.
 
+### Test Cases
+
+```js
+test("FizzBuzz Array", () => {
+  expect(fizzBuzzArray(15)).toEqual([
+    1,
+    2,
+    "Fizz",
+    4,
+    "Buzz",
+    "Fizz",
+    7,
+    8,
+    "Fizz",
+    "Buzz",
+    11,
+    "Fizz",
+    13,
+    14,
+    "FizzBuzz",
+  ]);
+});
+```
+
 ## Solutions
 
 <details>
@@ -71,27 +95,3 @@ function fizzBuzz(num) {
 - Return the array.
 
 </details>
-
-### Test Cases
-
-```js
-test("FizzBuzz Array", () => {
-  expect(fizzBuzzArray(15)).toEqual([
-    1,
-    2,
-    "Fizz",
-    4,
-    "Buzz",
-    "Fizz",
-    7,
-    8,
-    "Fizz",
-    "Buzz",
-    11,
-    "Fizz",
-    13,
-    14,
-    "FizzBuzz",
-  ]);
-});
-```

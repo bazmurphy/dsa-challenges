@@ -35,6 +35,21 @@ isValidIPv4("123.045.067.089"); // false
 - You can use the `split()` method to break the string into parts based on the dot character.
 - You can use `every()` to check if all octets are within the valid range of 0 to 255.
 
+### Test Cases
+
+```js
+test("Checking Valid IPv4 Addresses", () => {
+  expect(isValidIPv4("1.2.3.4")).toBe(true);
+  expect(isValidIPv4("123.45.67.89")).toBe(true);
+  expect(isValidIPv4("1.2.3")).toBe(false);
+  expect(isValidIPv4("1.2.3.4.5")).toBe(false);
+  expect(isValidIPv4("123.456.78.90")).toBe(false);
+  expect(isValidIPv4("123.045.067.089")).toBe(false);
+});
+```
+
+You can use this template for your challenge to validate IPv4 addresses in dot-decimal format!
+
 ## Solutions
 
 <details>
@@ -63,18 +78,3 @@ function isValidIPv4(input) {
   - Check if the octet is equal to the number converted back to a string. This is to check for leading zeros.
 
 </details>
-
-### Test Cases
-
-```js
-test("Checking Valid IPv4 Addresses", () => {
-  expect(isValidIPv4("1.2.3.4")).toBe(true);
-  expect(isValidIPv4("123.45.67.89")).toBe(true);
-  expect(isValidIPv4("1.2.3")).toBe(false);
-  expect(isValidIPv4("1.2.3.4.5")).toBe(false);
-  expect(isValidIPv4("123.456.78.90")).toBe(false);
-  expect(isValidIPv4("123.045.067.089")).toBe(false);
-});
-```
-
-You can use this template for your challenge to validate IPv4 addresses in dot-decimal format!

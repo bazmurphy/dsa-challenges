@@ -73,6 +73,37 @@ console.log(analysis);
 
 - You can use the `reduce` method for most of the calculations.
 
+### Test Cases
+
+```js
+test("Analyzing Car Mileage Data", () => {
+  const cars = [
+    { make: "Toyota", model: "Corolla", year: 2020, mileage: 25000 },
+    { make: "Honda", model: "Civic", year: 2019, mileage: 30000 },
+    { make: "Ford", model: "Mustang", year: 2021, mileage: 15000 },
+  ];
+
+  const analysis = analyzeCarMileage(cars);
+
+  expect(analysis.averageMileage).toBeCloseTo(23333.33);
+  expect(analysis.highestMileageCar).toEqual({
+    make: "Honda",
+    model: "Civic",
+    year: 2019,
+    mileage: 30000,
+  });
+  expect(analysis.lowestMileageCar).toEqual({
+    make: "Ford",
+    model: "Mustang",
+    year: 2021,
+    mileage: 15000,
+  });
+  expect(analysis.totalMileage).toBe(70000);
+});
+```
+
+Feel free to add more test cases to verify the correctness of your `analyzeCarMileage` function.
+
 ## Solution
 
 <details>
@@ -127,34 +158,3 @@ const highestMileageCar = cars.reduce(
 Whatever we return from the callback for the `reduce` method will be the new value of the accumulator.
 
 </details>
-
-### Test Cases
-
-```js
-test("Analyzing Car Mileage Data", () => {
-  const cars = [
-    { make: "Toyota", model: "Corolla", year: 2020, mileage: 25000 },
-    { make: "Honda", model: "Civic", year: 2019, mileage: 30000 },
-    { make: "Ford", model: "Mustang", year: 2021, mileage: 15000 },
-  ];
-
-  const analysis = analyzeCarMileage(cars);
-
-  expect(analysis.averageMileage).toBeCloseTo(23333.33);
-  expect(analysis.highestMileageCar).toEqual({
-    make: "Honda",
-    model: "Civic",
-    year: 2019,
-    mileage: 30000,
-  });
-  expect(analysis.lowestMileageCar).toEqual({
-    make: "Ford",
-    model: "Mustang",
-    year: 2021,
-    mileage: 15000,
-  });
-  expect(analysis.totalMileage).toBe(70000);
-});
-```
-
-Feel free to add more test cases to verify the correctness of your `analyzeCarMileage` function.

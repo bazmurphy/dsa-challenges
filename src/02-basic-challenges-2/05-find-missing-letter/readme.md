@@ -33,6 +33,17 @@ findMissingLetter(["t", "u", "v", "w", "x", "z"]); // => "y"
 - You can put the alphabet in a string and use the `indexOf` method to get the index of a letter in the alphabet string.
 - Another approach would be to use the `charCodeAt` method to get the unicode value of a letter.
 
+### Test Cases
+
+```js
+test("Find Missing Letter", () => {
+  expect(findMissingLetter(["a", "b", "c", "e"])).toBe("d");
+  expect(findMissingLetter(["X", "Z"])).toBe("Y");
+  expect(findMissingLetter(["m", "n", "o", "q", "r"])).toBe("p");
+  expect(findMissingLetter(["F", "G", "H", "J"])).toBe("I");
+});
+```
+
 ## Solutions
 
 <details>
@@ -88,14 +99,3 @@ function findMissingLetter(arr) {
 - If we get to the end of the loop without returning anything, we return an empty string.
 
 </details>
-
-### Test Cases
-
-```js
-test("Find Missing Letter", () => {
-  expect(findMissingLetter(["a", "b", "c", "e"])).toBe("d");
-  expect(findMissingLetter(["X", "Z"])).toBe("Y");
-  expect(findMissingLetter(["m", "n", "o", "q", "r"])).toBe("p");
-  expect(findMissingLetter(["F", "G", "H", "J"])).toBe("I");
-});
-```

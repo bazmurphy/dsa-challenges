@@ -33,6 +33,16 @@ countOccurrences("hello", "z"); // 0
 - You can use the `++` operator to increment a variable.
 - You could take another approach and use the `split()` method to split the string into an array of substrings based on the given character.
 
+### Test Cases
+
+```js
+test("Count Occurrences of a Character", () => {
+  expect(countOccurrences("hello", "l")).toBe(2);
+  expect(countOccurrences("programming", "m")).toBe(2);
+  expect(countOccurrences("banana", "a")).toBe(3);
+});
+```
+
 ## Solutions
 
 <details>
@@ -97,13 +107,3 @@ const countOccurrences = (str, char) => str.split(char).length - 1;
 This solution may be prettier, but it actually is not as efficient as the loop. The for loop solution directly counts the occurrences while iterating through the string, whereas the split solution involves splitting the string into an array and performing additional operations. The difference is negligible, but it is still good to be aware of.
 
 </details>
-
-### Test Cases
-
-```js
-test("Count Occurrences of a Character", () => {
-  expect(countOccurrences("hello", "l")).toBe(2);
-  expect(countOccurrences("programming", "m")).toBe(2);
-  expect(countOccurrences("banana", "a")).toBe(3);
-});
-```

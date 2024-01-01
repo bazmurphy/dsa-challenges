@@ -32,6 +32,17 @@ reverseString('') // ''
 - You can also do this without using any of the built-in methods and just use a for loop.
 - You could also use the methods `split`, `reverse`, and `join` to solve this problem.
 
+### Test Cases
+
+```JS
+test('Reversing a string', () => {
+  expect(reverseString('Hello')).toBe('olleH');
+  expect(reverseString('JavaScript')).toBe('tpircSavaJ');
+  expect(reverseString('12345')).toBe('54321');
+});
+
+```
+
 ## Solutions
 
 <details>
@@ -82,14 +93,3 @@ The `reverse` function takes in an array and reverses it. (["o", "l", "l", "e", 
 The `join` function takes in an array and turns it into a string. We passed in an empty string as an argument to `join` so that it will join the array of characters into a string. ('olleh')
 
 </details>
-
-### Test Cases
-
-```JS
-test('Reversing a string', () => {
-  expect(reverseString('Hello')).toBe('olleH');
-  expect(reverseString('JavaScript')).toBe('tpircSavaJ');
-  expect(reverseString('12345')).toBe('54321');
-});
-
-```

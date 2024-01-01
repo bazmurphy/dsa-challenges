@@ -36,6 +36,16 @@ findFirstNonRepeatingCharacter("abcdef"); // should return 'a'
 - You can use an object or a map to keep track of the number of times each character appears in the string.
 - You can iterate through the string and check if the current character has only appeared once.
 
+### Test Cases
+
+```js
+test("Find First Non-Repeating Character", () => {
+  expect(findFirstNonRepeatingCharacter("aabccdeff")).toBe("b");
+  expect(findFirstNonRepeatingCharacter("aabbcc")).toBe(null);
+  expect(findFirstNonRepeatingCharacter("hello world")).toBe("h");
+});
+```
+
 ## Solutions
 
 <details>
@@ -103,13 +113,3 @@ function findFirstNonRepeatingCharacter(str) {
 - If we make it through the entire string without returning a character, we return null because there are no non-repeating characters.
 
 </details>
-
-### Test Cases
-
-```js
-test("Find First Non-Repeating Character", () => {
-  expect(findFirstNonRepeatingCharacter("aabccdeff")).toBe("b");
-  expect(findFirstNonRepeatingCharacter("aabbcc")).toBe(null);
-  expect(findFirstNonRepeatingCharacter("hello world")).toBe("h");
-});
-```

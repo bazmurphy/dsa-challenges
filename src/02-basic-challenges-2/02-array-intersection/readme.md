@@ -34,6 +34,18 @@ arrayIntersection([1, 2, 3, 4, 5], [5, 4, 3, 2, 1]); // should return [1, 2, 3, 
 - You could use a for loop to iterate through the first array and check if each element is in the second array using the `includes` method.
 - You could also take the approach of using a Set to store the elements of the first array and then iterate through the second array and check if each element is in the Set using the `has` method.
 
+### Test Cases
+
+```js
+test("Finding array intersection", () => {
+  expect(arrayIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])).toEqual([
+    3, 4, 5,
+  ]);
+  expect(arrayIntersection([10, 20, 30], [30, 40, 50])).toEqual([30]);
+  expect(arrayIntersection([1, 2, 3], [4, 5, 6])).toEqual([]);
+});
+```
+
 ## Solutions
 
 <details>
@@ -91,15 +103,3 @@ function arrayIntersection(arr1, arr2) {
 - Return the intersection array
 
 </details>
-
-### Test Cases
-
-```js
-test("Finding array intersection", () => {
-  expect(arrayIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7])).toEqual([
-    3, 4, 5,
-  ]);
-  expect(arrayIntersection([10, 20, 30], [30, 40, 50])).toEqual([30]);
-  expect(arrayIntersection([1, 2, 3], [4, 5, 6])).toEqual([]);
-});
-```

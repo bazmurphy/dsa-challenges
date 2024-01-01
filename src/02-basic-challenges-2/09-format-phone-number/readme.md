@@ -33,6 +33,22 @@ formatPhoneNumber([3, 4, 5, 5, 0, 1, 2, 5, 2, 7]); // => "(345) 501-2527"
 - You can use the `Array.join` method to concatenate the numbers in the array.
 - You can use the `Array.slice` method to get a subset of the array.
 
+### Test Cases
+
+```js
+test("Format Phone Number", () => {
+  expect(formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])).toBe(
+    "(123) 456-7890",
+  );
+  expect(formatPhoneNumber([5, 0, 2, 4, 8, 1, 9, 6, 3, 7])).toBe(
+    "(502) 481-9637",
+  );
+  expect(formatPhoneNumber([9, 9, 9, 9, 9, 9, 9, 9, 9, 9])).toBe(
+    "(999) 999-9999",
+  );
+});
+```
+
 ## Solutions
 
 <details>
@@ -93,19 +109,3 @@ const formatPhoneNumber = (numbers) =>
 This is similar to the second solution, but we used an arrow function and Array.slice method chaining.
 
 </details>
-
-### Test Cases
-
-```js
-test("Format Phone Number", () => {
-  expect(formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])).toBe(
-    "(123) 456-7890",
-  );
-  expect(formatPhoneNumber([5, 0, 2, 4, 8, 1, 9, 6, 3, 7])).toBe(
-    "(502) 481-9637",
-  );
-  expect(formatPhoneNumber([9, 9, 9, 9, 9, 9, 9, 9, 9, 9])).toBe(
-    "(999) 999-9999",
-  );
-});
-```

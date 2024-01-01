@@ -40,6 +40,17 @@ validatePassword("HelloWorld"); // should return false (no digit)
 
 - You can use the `split` function to convert the string into an array of characters and then use the `some` function to check if at least one character meets a certain condition.
 
+### Test Cases
+
+```js
+test("Password Validation", () => {
+  expect(validatePassword("Abc12345")).toBe(true);
+  expect(validatePassword("password123")).toBe(false);
+  expect(validatePassword("Pass")).toBe(false);
+  expect(validatePassword("HelloWorld")).toBe(false);
+});
+```
+
 ## Solution
 
 <details>
@@ -76,14 +87,3 @@ function validatePassword(password) {
 The `some` function is used to check if at least one character in the password meets a certain condition. The `some` function takes in a callback function as an argument. The callback function is called for each character in the password. If the callback function returns `true` for at least one character, then the `some` function returns `true`. Otherwise, the `some` function returns `false`.
 
 </details>
-
-### Test Cases
-
-```js
-test("Password Validation", () => {
-  expect(validatePassword("Abc12345")).toBe(true);
-  expect(validatePassword("password123")).toBe(false);
-  expect(validatePassword("Pass")).toBe(false);
-  expect(validatePassword("HelloWorld")).toBe(false);
-});
-```

@@ -39,6 +39,20 @@ highestScoringWord("take me to semynak"); // 'semynak'
 - You can use the `map` method to calculate the score for each word.
 - You can use the `reduce` method to find the word with the highest score.
 
+### Test Cases
+
+```js
+test("Finding the highest scoring word", () => {
+  expect(highestScoringWord("hello my name is xavier")).toBe("xavier");
+  expect(highestScoringWord("what time are we climbing up the volcano")).toBe(
+    "volcano",
+  );
+  expect(highestScoringWord("take me to semynak")).toBe("semynak");
+});
+```
+
+Remember to use the provided test cases to verify your solution
+
 ## Solutions
 
 <details>
@@ -112,17 +126,3 @@ function highestScoringWord(str) {
 - Return the word with the highest score using the `highestIndex`.
 
 </details>
-
-### Test Cases
-
-```js
-test("Finding the highest scoring word", () => {
-  expect(highestScoringWord("hello my name is xavier")).toBe("xavier");
-  expect(highestScoringWord("what time are we climbing up the volcano")).toBe(
-    "volcano",
-  );
-  expect(highestScoringWord("take me to semynak")).toBe("semynak");
-});
-```
-
-Remember to use the provided test cases to verify your solution

@@ -43,6 +43,24 @@ console.log(diceGameSimulation(3));
 
 - You can use the `Math.random()` function to simulate rolling a die. It returns a random number between 0 (inclusive) and 1 (exclusive).
 
+### Test Cases
+
+```js
+test("Dice Game Simulation", () => {
+  const numSimulations = 5;
+  const simulationResults = diceGameSimulation(numSimulations);
+
+  simulationResults.forEach((result) => {
+    console.log(`Simulation Result: ${result.finalResult}`);
+    result.rolls.forEach((roll) => {
+      console.log(
+        `  Dice 1: ${roll.dice1}, Dice 2: ${roll.dice2}, Sum: ${roll.sum}, Result: ${roll.result}`,
+      );
+    });
+  });
+});
+```
+
 ## Solution
 
 <details>
@@ -88,21 +106,3 @@ module.exports = diceGameSimulation;
 - The module exports the `diceGameSimulation` function to make it accessible in other files.
 
 </details>
-
-### Test Cases
-
-```js
-test("Dice Game Simulation", () => {
-  const numSimulations = 5;
-  const simulationResults = diceGameSimulation(numSimulations);
-
-  simulationResults.forEach((result) => {
-    console.log(`Simulation Result: ${result.finalResult}`);
-    result.rolls.forEach((roll) => {
-      console.log(
-        `  Dice 1: ${roll.dice1}, Dice 2: ${roll.dice2}, Sum: ${roll.sum}, Result: ${roll.result}`,
-      );
-    });
-  });
-});
-```

@@ -36,6 +36,17 @@ isPalindrome('') // true
 - You can solve this in a way that is similar to the reverse string challenge with some added steps.
 - Remember, you want to remove any non-alphanumeric characters from the string before comparing it to the reversed string. There are multiple ways to do this, but one way is to use the `replace` method with a regular expression of `/[^a-z0-9]/g`.
 
+### Test Cases
+
+```js
+test("Checking for palindrome strings", () => {
+  expect(isPalindrome("racecar")).toBe(true);
+  expect(isPalindrome("Hello")).toBe(false);
+  expect(isPalindrome("A man, a plan, a canal, Panama")).toBe(true);
+  expect(isPalindrome("12321")).toBe(true);
+});
+```
+
 ## Solutions
 
 <details>
@@ -112,14 +123,3 @@ This solution is a bit tougher.
 - Once we have a string with only alphanumeric characters, we can reverse it and compare it to the original string to see if it is a palindrome.
 
 </details>
-
-### Test Cases
-
-```js
-test("Checking for palindrome strings", () => {
-  expect(isPalindrome("racecar")).toBe(true);
-  expect(isPalindrome("Hello")).toBe(false);
-  expect(isPalindrome("A man, a plan, a canal, Panama")).toBe(true);
-  expect(isPalindrome("12321")).toBe(true);
-});
-```

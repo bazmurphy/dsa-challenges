@@ -29,6 +29,17 @@ countVowels("mississippi"); // 4
 
 ### Hints
 
+### Test Cases
+
+```js
+test("Counting vowels in a string", () => {
+  expect(countVowels("Hello, World!")).toBe(3);
+  expect(countVowels("JavaScript")).toBe(3);
+  expect(countVowels("OpenAI Chatbot")).toBe(6);
+  expect(countVowels("Coding Challenge")).toBe(5);
+});
+```
+
 ## Solutions
 
 <details>
@@ -65,14 +76,3 @@ function countVowels(str) {
 - Check if the character is a vowel. If it is, we increment `count` by `1`. Once we have looped through the entire string, we return `count`.
 
 </details>
-
-### Test Cases
-
-```js
-test("Counting vowels in a string", () => {
-  expect(countVowels("Hello, World!")).toBe(3);
-  expect(countVowels("JavaScript")).toBe(3);
-  expect(countVowels("OpenAI Chatbot")).toBe(6);
-  expect(countVowels("Coding Challenge")).toBe(5);
-});
-```
