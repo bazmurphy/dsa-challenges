@@ -25,6 +25,8 @@ So if we wanted to find the 5th number in the sequence, we would do this:
 
 So we can see that `F(2) = 1 + 0 = 1`, `F(3) = 1 + 1 = 2`, `F(4) = 2 + 1 = 3`, and `F(5) = 3 + 2 = 5`. So the 5th number in the sequence is 5.
 
+![](../../assets/04-04-01.png)
+
 ## Instructions
 
 Write a function called `fibonacci` that takes in a number and returns the number at that index of the Fibonacci sequence.
@@ -56,6 +58,8 @@ fibonacci(10); // 55
 
 - You know that the formula is `F(n) = F(n-1) + F(n-2)`. `F`` is the function, and `n` is the number in the sequence.
 - You know that the first two numbers in the sequence are `0` and `1`. So if the number is less than 2, you can return the number.
+
+![](../../assets/04-04-02.png)
 
 ### Test Cases
 
