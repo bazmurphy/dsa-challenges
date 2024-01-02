@@ -93,11 +93,11 @@ return 16 * 2 = 32
 
 ```mermaid
 graph TD
-  A[START I FINISH ] -->|CALL: power 2, 5 | B(2 * power 2, 4 ~> 2 * 16 = 32)
-  B -->|CALL: power 2, 4 | C(2 * power 2, 3 ~> 2 * 8 = 16)
-  C -->|CALL: power 2, 3 | D(2 * power 2, 2 ~> 2 * 4 = 8)
-  D -->|CALL: power 2, 2 | E(2 * power 2, 1 ~> 2 * 2 = 4)
-  E -->|CALL: power 2, 1 | F(2 * power 2, 0 ~> 2 * 1 = 2)
+  A[START I FINISH ] -->|CALL: power 2, 5 | B(2 * power 2, 4 -> 2 * 16 = 32)
+  B -->|CALL: power 2, 4 | C(2 * power 2, 3 -> 2 * 8 = 16)
+  C -->|CALL: power 2, 3 | D(2 * power 2, 2 -> 2 * 4 = 8)
+  D -->|CALL: power 2, 2 | E(2 * power 2, 1 -> 2 * 2 = 4)
+  E -->|CALL: power 2, 1 | F(2 * power 2, 0 -> 2 * 1 = 2)
   F -->|CALL: power 2, 0 | G(BASE CASE MET, UNWIND THE CALLSTACK!)
   G -->|RETURN: 1 | F
   F -->|RETURN: 2 | E
