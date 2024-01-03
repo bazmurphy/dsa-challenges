@@ -112,11 +112,11 @@ The final result is indeed 120, which is the correct factorial of 5.
 
 ```mermaid
 graph TD
-  A[START I FINISH] -->|CALL: factorial 5 | B(5 * factorial 4)
-  B -->|CALL: factorial 4 | C(4 * factorial 3)
-  C -->|CALL: factorial 3 | D(3 * factorial 2)
-  D -->|CALL: factorial 2 | E(2 * factorial 1)
-  E -->|CALL: factorial 1 | F(BASE CASE MET, UNWIND THE CALLSTACK!)
+  A["START | FINISH"] -->|"CALL: factorial(5)"| B["5 * factorial(4)"]
+  B -->|"CALL: factorial(4)"| C["4 * factorial(3)"]
+  C -->|"CALL: factorial(3)"| D["3 * factorial(2)"]
+  D -->|"CALL: factorial(2)"| E["2 * factorial(1)"]
+  E -->|"CALL: factorial(1)"| F[BASE CASE MET, UNWIND THE CALLSTACK]
   F -->|RETURN: 1 because 1 * 1 | E
   E -->|RETURN: 2 because 2 * 1 | D
   D -->|RETURN: 6 because 3 * 2 | C

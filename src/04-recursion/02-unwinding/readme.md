@@ -12,10 +12,12 @@ Let's look at an example of this. Consider the following function:
 
 ```js
 function sumUpTo(n) {
+  // base case
   if (n === 1) {
     return 1;
   }
 
+  // recursive case
   return n + sumUpTo(n - 1);
 }
 ```
@@ -82,11 +84,11 @@ sumUpTo(5) returns 15
 
 ```mermaid
 graph TD
-  A[START I FINISH] -->|CALL: sumUpTo 5 | B(RETURN: sumUpTo 4)
-  B -->|CALL: sumUpTo 4 | C(RETURN: sumUpTo 3)
-  C -->|CALL: sumUpTo 3 | D(RETURN: sumUpTo 2)
-  D -->|CALL: sumUpTo 2 | E(RETURN: sumUpTo 1)
-  E -->|CALL: sumUpTo 1 | F(BASE CASE MET, UNWIND THE CALLSTACK!)
+  A["START | FINISH"] -->|"CALL: sumUpTo(5)"| B["5 + sumUpTo(4) <br> 5 + 10 = 15"]
+  B -->|"CALL: sumUpTo(4)"| C["4 + sumUptTo(3) <br>4 + 6 = 10"]
+  C -->|"CALL: sumUpTo(3)"| D["3 + sumpUpto(2) <br>3 + 3 = 6"]
+  D -->|"CALL: sumUpTo(2)"| E["2 + sumUpTo(1) <br> 2 + 1 = 3"]
+  E -->|"CALL: sumUpTo(1)"| F[BASE CASE MET, UNWIND THE CALLSTACK]
   F -->|RETURN: 1 | E
   E -->|RETURN: 3 | D
   D -->|RETURN: 6 | C

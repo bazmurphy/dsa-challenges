@@ -114,25 +114,25 @@ Let's look at this step by step using an example where input num is 5:
 
 So, `fibonacci(5)` returns `5`, which is the fifth number in the Fibonacci sequence.
 
-### Diagram
-
-```mermaid
-graph TD
-  A[START I FINISH] -->|CALL: fibonacci 5 | B(fibonacci 4 + fibonacci 3)
-  B -->|CALL: fibonacci 4 | C(fibonacci 3 + fibonacci 2)
-  C -->|CALL: fibonacci 3 | D(fibonacci 2 + fibonacci 1)
-  D -->|CALL: fibonacci 2 | E(fibonacci 1 + fibonacci 0)
-  E -->|CALL: fibonacci 1 | F(BASE CASE MET, UNWIND THE CALLSTACK!)
-  F -->|RETURN: 1 | E
-  E -->|RETURN: 1 | D
-  D -->|RETURN: 2 | C
-  C -->|RETURN: 3 | B
-  B -->|RETURN: 5 | A
-```
-
 We could make this a one liner by using the ternary operator:
 
 ```js
 const fibonacci = (num) =>
   num < 2 ? num : fibonacci(num - 1) + fibonacci(num - 2);
+```
+
+### Diagram
+
+```mermaid
+graph TD
+  A["START | FINISH"] -->|"CALL: fibonacci(5)"| B["fibonacci(4) + fibonacci(3)"]
+  B -->|"CALL: fibonacci(4)"| C["fibonacci(3) + fibonacci(2)"]
+  C -->|"CALL: fibonacci(3)"| D["fibonacci(2) + fibonacci(1)"]
+  D -->|"CALL: fibonacci(2)"| E["fibonacci(1) + fibonacci(0)"]
+  E -->|"CALL: fibonacci(1)"| F[BASE CASE MET, UNWIND THE CALLSTACK]
+  F -->|RETURN: 1| E
+  E -->|RETURN: 1| D
+  D -->|RETURN: 2| C
+  C -->|RETURN: 3| B
+  B -->|RETURN: 5| A
 ```

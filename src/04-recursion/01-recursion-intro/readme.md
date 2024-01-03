@@ -67,10 +67,10 @@ We are calling the same function with a smaller number each time. This is recurs
 
 ```mermaid
 graph TD
-  A[START I FINISH] -->|CALL: countDown 3 | B(CONSOLE LOG 3, num--, RETURN countDown 2)
-  B -->|CALL: countDown 2 | C(CONSOLE LOG 2, num--, RETURN countDown 1)
-  C -->|CALL: countDown 1 | D(CONSOLE LOG 1, num--, RETURN countDown 0)
-  D -->|CALL: countDown 0 | E(CONSOLE LOG All Done! BASE CASE MET, UNWIND THE CALLSTACK!)
+  A["START | FINISH"] -->|"CALL: countDown(3)"| B["console.log(3), num--, countDown(2)"]
+  B -->|"CALL: countDown(2)"| C["console.log(2), num--, countDown(1)"]
+  C -->|"CALL: countDown(1)"| D["console.log(1), num--, countDown(0)"]
+  D -->|"CALL: countDown(0)"| E["console.log('All Done!') <br> BASE CASE MET, UNWIND THE CALLSTACK"]
   E -->|RETURN | D
   D -->|RETURN | C
   C -->|RETURN | B

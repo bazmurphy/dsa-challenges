@@ -82,28 +82,28 @@ Now, we can start "unwinding" the recursion and concatenating the characters to 
 
 So, the function concatenates the characters in reverse order as it "unwinds" the recursion, effectively reversing the original string.
 
-### Diagram
-
-```mermaid
-graph TD
-  A[START I FINISH] -->|CALL: reverseString hello | B(Value: hello)
-  B -->|CALL: reverseString ello | C(Value: ello)
-  C -->|CALL: reverseString llo | D(Value: llo)
-  D -->|CALL: reverseString lo | E(Value: lo)
-  E -->|CALL: reverseString o | F(Value: o)
-  F -->|RETURN: o | E
-  F -->|CALL: reverseString empty string | G(BASE CASE MET, UNWIND THE CALLSTACK!)
-  G -->|RETURN: empty string| F
-  E -->|RETURN: ol | D
-  D -->|RETURN: llo | C
-  C -->|RETURN: olle | B
-  B -->|RETURN: olleh | A
-```
-
 We could even cut this solution down to a single line:
 
 ```js
 // Shorter version
 const reverseString = (str) =>
   str === "" ? "" : reverseString(str.substr(1)) + str.charAt(0);
+```
+
+### Diagram
+
+```mermaid
+graph TD
+  A["START | FINISH"] -->|"CALL: reverseString('hello')"| B["reverseString('ello') + 'h'"]
+  B -->|"CALL: reverseString('ello')" | C["reverseString('llo') + 'e'"]
+  C -->|"CALL: reverseString('llo')" | D["reverseString('lo') + 'l'"]
+  D -->|"CALL: reverseString('lo')" | E["reverseString('o') + 'l'"]
+  E -->|"CALL: reverseString('o')" | F["reverseString('o') + ''"]
+  F -->|"CALL: reverseString('')" | G[BASE CASE MET, UNWIND THE CALLSTACK]
+  F -->|RETURN: 'o' | E
+  G -->|RETURN: ''| F
+  E -->|RETURN: 'ol' | D
+  D -->|RETURN: 'llo' | C
+  C -->|RETURN: 'olle' | B
+  B -->|RETURN: 'olleh' | A
 ```
