@@ -1,4 +1,6 @@
-export default function flattenArray(arr: Array<number | number[]>): number[] {
+type NestedArray = Array<number | NestedArray>;
+
+export default function flattenArray(arr: NestedArray): number[] {
   // the structure of this is very different from the previous challenges
   // the base case is implicitly handled within the loop structure :
   // as the loop iterates through each element of the input array...
