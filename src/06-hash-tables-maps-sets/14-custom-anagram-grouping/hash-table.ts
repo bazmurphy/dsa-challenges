@@ -117,12 +117,12 @@ export default class HashTable {
   // print the hash table
   printTable() {
     if (this.storage.length === 0) {
-      console.log("HashMap | empty");
+      console.log("HashTable | empty");
       return;
     }
     for (let i = 0; i < this.storage.length; i++) {
       console.log(
-        `HashMap | index: ${i} | bucket: ${JSON.stringify(this.storage[i])}`,
+        `HashTable | index: ${i} | bucket: ${JSON.stringify(this.storage[i])}`,
       );
     }
   }

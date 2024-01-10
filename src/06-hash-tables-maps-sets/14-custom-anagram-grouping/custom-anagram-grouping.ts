@@ -1,4 +1,4 @@
-import HashTable from "./HashTable";
+import HashTable from "./hash-table";
 
 export default function anagramGrouping(words: string[]): string[][] {
   const hashTable = new HashTable();

@@ -1,4 +1,4 @@
-import HashTable from "./HashTable";
+import HashTable from "./hash-table";
 
 export default function wordInstanceCounter(str: string, word: string): number {
   const allWords = str.toLowerCase().split(/\W+/);
