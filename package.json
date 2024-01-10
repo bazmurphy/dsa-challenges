@@ -14,8 +14,9 @@
     "test:watch": "jest --watch",
     "transpile": "tsc",
     "transpile:watch": "tsc --watch",
-    "start:bug": "ts-node --esm ./src/x/x/x.ts",
-    "start:working": "node --loader ts-node/esm ./src/x/x/x.ts"
+    "start-tsnode:bug": "ts-node --esm ./src/x/x/x.ts",
+    "start-tsnode:working": "node --loader ts-node/esm ./src/x/x/x.ts",
+    "start-tsx:working": "tsx ./src/x/x/x.ts"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
@@ -28,6 +29,7 @@
     "prettier": "^3.1.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   }
 }
